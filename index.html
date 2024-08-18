@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de JavaScript</h1>
+
+        <div class="form-section">
+            <h2>Ejercicio 1: Mayor de Edad</h2>
+            <label for="edad">Ingresa tu edad:</label>
+            <input type="number" id="edad" min="0" max="100">
+            <button onclick="verificarEdad()">Verificar Edad</button>
+            <p id="resultadoEdad"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 2: Nota Final del Alumno</h2>
+            <label for="nombreAlumno">Nombre:</label>
+            <input type="text" id="nombreAlumno">
+            <label for="carnetAlumno">Carnet:</label>
+            <input type="text" id="carnetAlumno">
+            <label for="examen">Nota del Examen:</label>
+            <input type="number" id="examen" min="0" max="10">
+            <label for="tareas">Nota de Tareas:</label>
+            <input type="number" id="tareas" min="0" max="10">
+            <label for="asistencia">Nota de Asistencia:</label>
+            <input type="number" id="asistencia" min="0" max="10">
+            <label for="investigacion">Nota de Investigación:</label>
+            <input type="number" id="investigacion" min="0" max="10">
+            <button onclick="calcularNotaFinal()">Calcular Nota Final</button>
+            <p id="resultadoNotaFinal"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 3: Aumento Salarial</h2>
+            <label for="nombreEmpleado">Nombre:</label>
+            <input type="text" id="nombreEmpleado">
+            <label for="salarioEmpleado">Salario:</label>
+            <input type="number" id="salarioEmpleado" min="365.00" step="0.01">
+            <label for="categoriaEmpleado">Categoría:</label>
+            <select id="categoriaEmpleado">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            <button onclick="calcularAumento()">Calcular Aumento</button>
+            <p id="resultadoAumento"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 4: Mayor de Dos Números</h2>
+            <label for="numero1">Número 1:</label>
+            <input type="number" id="numero1">
+            <label for="numero2">Número 2:</label>
+            <input type="number" id="numero2">
+            <button onclick="encontrarMayor()">Encontrar Mayor</button>
+            <p id="resultadoMayor"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 5: Descuento en Compra de Coche</h2>
+            <label for="modelo">Selecciona el modelo del coche:</label>
+            <select id="modelo">
+                <option value="FORD FIESTA">FORD FIESTA</option>
+                <option value="FORD FOCUS">FORD FOCUS</option>
+                <option value="FORD ESCAPE">FORD ESCAPE</option>
+            </select>
+            <label for="precio">Precio del Coche:</label>
+            <input type="number" id="precio" min="1000.00" step="0.01">
+            <button onclick="calcularDescuento()">Calcular Descuento</button>
+            <p id="resultadoDescuento"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 6: Descuento en Viajes Turísticos</h2>
+            <label for="origen">Ciudad de Origen:</label>
+            <input type="text" id="origen" value="Palma" readonly>
+            <label for="destino">Ciudad de Destino:</label>
+            <select id="destino">
+                <option value="la costa del sol">La Costa del Sol</option>
+                <option value="panchimalco">Panchimalco</option>
+                <option value="puerto el triunfo">Puerto el Triunfo</option>
+            </select>
+            <label for="costo">Costo del Viaje:</label>
+            <input type="number" id="costo" min="0" step="0.01">
+            <button onclick="calcularDescuentoViaje()">Calcular Descuento</button>
+            <p id="resultadoDescuentoViaje"></p>
+        </div>        
+        
+        <div class="form-section">
+            <h2>Ejercicio 7: Estadísticas de Números</h2>
+            <label for="valores">Ingrese 10 valores enteros (separados por comas):</label>
+            <input type="text" id="valores" placeholder="Ejemplo: 1, -2, 15, 20, ...">
+            <button onclick="calcularEstadisticas()">Calcular Estadísticas</button>
+            <p id="resultadoEstadisticas"></p>
+        </div>
+        
+        <div class="form-section">
+            <h2>Ejercicio 8: Tabla de Multiplicar</h2>
+            <label for="numero">Ingrese un número:</label>
+            <input type="number" id="numero" min="1" max="10">
+            <button onclick="mostrarTabla()">Mostrar Tabla</button>
+            <p id="resultadoTabla"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Ejercicio 9: Conversión de Temperatura</h2>
+            <label for="tempCelsius">Ingrese temperatura en Celsius:</label>
+            <input type="number" id="tempCelsius">
+            <button onclick="convertirTemperatura()">Convertir</button>
+            <p id="resultadoTemperatura"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Promedio de Edades de Estudiantes</h2>
+        
+            <h3>Turno Mañana (5 estudiantes)</h3>
+            <input type="number" class="edad" id="edadM1" placeholder="Edad 1" min="3" max="25">
+            <input type="number" class="edad" id="edadM2" placeholder="Edad 2" min="3" max="25">
+            <input type="number" class="edad" id="edadM3" placeholder="Edad 3" min="3" max="25">
+            <input type="number" class="edad" id="edadM4" placeholder="Edad 4" min="3" max="25">
+            <input type="number" class="edad" id="edadM5" placeholder="Edad 5" min="3" max="25">
+        
+            <h3>Turno Tarde (6 estudiantes)</h3>
+            <input type="number" class="edad" id="edadT1" placeholder="Edad 1" min="3" max="25">
+            <input type="number" class="edad" id="edadT2" placeholder="Edad 2" min="3" max="25">
+            <input type="number" class="edad" id="edadT3" placeholder="Edad 3" min="3" max="25">
+            <input type="number" class="edad" id="edadT4" placeholder="Edad 4" min="3" max="25">
+            <input type="number" class="edad" id="edadT5" placeholder="Edad 5" min="3" max="25">
+            <input type="number" class="edad" id="edadT6" placeholder="Edad 6" min="3" max="25">
+        
+            <h3>Turno Noche (11 estudiantes)</h3>
+            <input type="number" class="edad" id="edadN1" placeholder="Edad 1" min="3" max="25">
+            <input type="number" class="edad" id="edadN2" placeholder="Edad 2" min="3" max="25">
+            <input type="number" class="edad" id="edadN3" placeholder="Edad 3" min="3" max="25">
+            <input type="number" class="edad" id="edadN4" placeholder="Edad 4" min="3" max="25">
+            <input type="number" class="edad" id="edadN5" placeholder="Edad 5" min="3" max="25">
+            <input type="number" class="edad" id="edadN6" placeholder="Edad 6" min="3" max="25">
+            <input type="number" class="edad" id="edadN7" placeholder="Edad 7" min="3" max="25">
+            <input type="number" class="edad" id="edadN8" placeholder="Edad 8" min="3" max="25">
+            <input type="number" class="edad" id="edadN9" placeholder="Edad 9" min="3" max="25">
+            <input type="number" class="edad" id="edadN10" placeholder="Edad 10" min="3" max="25">
+            <input type="number" class="edad" id="edadN11" placeholder="Edad 11" min="3" max="25">
+        
+            <button onclick="calcularPromedios()">Calcular Promedios</button>
+        
+            <p id="resultadoPromedios"></p>
+        </div>        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
